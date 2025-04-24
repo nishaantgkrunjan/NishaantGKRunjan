@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishaant GK Runjan - Spiritual Coach & Energy Healer</title>
+    <style>
+        :root {
+            --primary-color: #e8f5e9;
+            --secondary-color: #81c784;
+            --accent-color: #4caf50;
+            --text-color: #1b5e20;
+            --light-text: #2e7d32;
+            --dark-bg: #c8e6c9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--accent-color);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--text-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2rem;
+            color: var(--text-color);
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            background-color: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+        }
+        
+        .check-item {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .check-item::before {
+            content: "✅";
+            margin-right: 0.5rem;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .service-item::before {
+            content: "🔹";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        .testimonials {
+            background-color: var(--dark-bg);
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .client-name {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-top: 1rem;
+        }
+        
+        footer {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item i {
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
+            }
+            
+            .about {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Nishaant GK Runjan</div>
+            <div class="tagline">Global Spiritual Coach & Energy Healer</div>
+            <p>With over 20 years of experience, I specialize in deep-rooted healing, energy balancing, and spiritual transformation.</p>
+            <a href="#contact" class="cta-button">Begin Your Healing Journey</a>
+        </div>
+    </header>
+    
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about">
+            <div class="about-image">
+                <img src="NIS.jpeg" alt="Nishaant GK Runjan - Spiritual Coach & Energy Healer" />
+            </div>
+            <div class="about-text">
+                <h3>Your Guide to Spiritual Awakening & Holistic Healing</h3>
+                <p>With two decades of experience in spiritual coaching and energy healing, I have helped thousands of people worldwide overcome various challenges and transform their lives.</p>
+                <br>
+                <p>I specialize in:</p>
+                <div class="check-item">Chronic Physical Illnesses — Thyroid, Heart Problems, Blood Pressure, Migraines, Cancer, and more.</div>
+                <div class="check-item">Mental Health Issues — Anxiety, Depression, Stress, Phobias, and Emotional Imbalances.</div>
+                <div class="check-item">Spiritual & Energetic Blockages — Karmic Bondage, Ancestral Curses, Negative Energies, and Low Vibrational States.</div>
+                <br>
+                <p>I combine ancient Vedic wisdom with modern healing techniques, ensuring that each person receives a personalized and transformational healing experience.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services">
+        <h2 class="section-title">Advanced Healing Modalities</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Energy Healing & Spiritual Therapies</h3>
+                <div class="service-item">
+                    <strong>Shri Vidya Healing</strong> — Unlock Divine Feminine Energy & Kundalini Awakening.
+                </div>
+                <div class="service-item">
+                    <strong>Maha Mrityunjaya Sanjeevani Healing</strong> — Deep Cellular & Soul-Level Healing.
+                </div>
+                <div class="service-item">
+                    <strong>Ganpati Chakra Healing</strong> — Remove Obstacles & Manifest Success.
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <h3>Past Life & Subconscious Healing</h3>
+                <div class="service-item">
+                    <strong>Past Life Regression</strong> — Discover & Heal Unresolved Past Karma.
+                </div>
+                <div class="service-item">
+                    <strong>Family Constellation</strong> — Heal Generational Traumas & Relationship Patterns.
+                </div>
+                <div class="service-item">
+                    <strong>Hypnotherapy & NLP</strong> — Reprogram Your Mind for Abundance & Inner Peace.
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <h3>Rudraksha & Mantra Therapy</h3>
+                <div class="service-item">
+                    <strong>Rudraksha Healing</strong> — Unique Rudraksha-based healing for incurable diseases.
+                </div>
+                <div class="service-item">
+                    <strong>Mantra Therapy</strong> — Personalized mantra-based healing for deep energetic cleansing.
+                </div>
+                <div class="service-item">
+                    <strong>Sacred Energy Activation</strong> — Align yourself with powerful spiritual vibrations.
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <p>All services are available globally via online consultation!</p>
+            <a href="#contact" class="cta-button">Explore All Services</a>
+        </div>
+    </section>
+    
+    <section id="testimonials">
+        <h2 class="section-title">Client Success Stories</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p>"After suffering from chronic migraines for years, Rudraksha Therapy & Mantra Healing changed my life! Thank you for your divine guidance."</p>
+                <div class="client-name">— Emma, USA</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p>"I had severe anxiety and emotional trauma. Past Life Regression and Hypnotherapy helped me break free from negative cycles."</p>
+                <div class="client-name">— Rohan, India</div>
+            </div>
+            
+            <p>Join the thousands who have transformed their lives!</p>
+            <a href="#contact" class="cta-button">Read More Testimonials</a>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <h2 class="section-title" style="color: white;">Let's Start Your Healing Journey</h2>
+        <p>Available worldwide for in-person and online consultations.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i>📩</i> Email: <a href="nishaantgkrunjan@mail.com" style="color: white;">nishaantgkrunjan@gmail.com</a>
+            </div>
+            
+            <div class="contact-item">
+                <i>📲</i> WhatsApp: +91 7715906139
+            </div>
+            
+            <div class="contact-item">
+                <i>🌐</i> Website: <a href="https://www.nishaantgkrunjan.com" style="color: white;">www.nishaantgkrunjan.com</a>
+            </div>
+        </div>
+        
+        <a href="#" class="cta-button">Book a Free Consultation</a>
+        
+        <p style="margin-top: 2rem; font-size: 0.9rem;">© 2025 Nishaant GK Runjan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
